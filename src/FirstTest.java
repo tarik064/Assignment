@@ -63,17 +63,21 @@ public class FirstTest {
 		
 		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("1234" + randomInt);
 		
+		//Day, Month, Year 10th August, 1985
 		Select selDay = new Select(driver.findElement(By.xpath("//*[@id=\"days\"]")));
 		selDay.selectByIndex(10);
 		Select selMonth = new Select(driver.findElement(By.xpath("//*[@id=\"months\"]")));
 		selMonth.selectByIndex(8);
 		Select selYear = new Select(driver.findElement(By.xpath("//*[@id=\"years\"]")));
-		selYear.selectByIndex(8);
+		selYear.selectByValue("1985");
 		
+		//Signup with newsletter
 		driver.findElement(By.xpath("//*[@id=\"newsletter\"]")).click();
 		
 		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("Kallyanpur, Mirpur, Dhaka");
 		driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Dora");
+		
+		//State = Arizona
 		Select state = new Select(driver.findElement(By.xpath("//*[@id=\"id_state\"]")));
 		state.selectByVisibleText("Arizona");
 		driver.findElement(By.xpath("//*[@id=\"postcode\"]")).sendKeys("00001");
