@@ -27,3 +27,9 @@ the checkbox ‘Signup for our newsletter!’)
 ** Register button was clicked
 
 ** New user was verified by assertion
+
+
+Instruction:
+
+**Go to the .classpath to track all the jars location.
+
